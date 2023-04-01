@@ -7,7 +7,9 @@ body {
     'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #4bf308b6;
+  background-color:
+    #466368;
+     radial-gradient(#648880, #293f50);
   color: #212121;
   line-height: 1.5;
   padding: 0;
@@ -32,7 +34,7 @@ button:hover {
 
 .search-form {
   width: 100vw;
-  padding: 40px;
+  padding: 25px;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -65,7 +67,7 @@ input::placeholder {
 }
 
 .gallery {
-  padding: 20px;
+  padding: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,6 +78,8 @@ input::placeholder {
 
 .photo-card {
   margin-top: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 1px rgba(0, 0, 0, .14), 0 2px 1px rgba(0, 0, 0, .2);
+  border-radius: 0 0 10px 10px;
 }
 
 .photo-card:not(:last-child) {
@@ -93,10 +97,11 @@ div img {
 .info {
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  background-color: #ffffffad;
   width: 100%;
   padding: 5px;
   font-size: 10px;
+  border-radius: 0 0 10px 10px ;
 }
 
 .info-item {
