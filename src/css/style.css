@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color:
     #466368;
-     radial-gradient(#648880, #293f50);
+    radial-gradient(#648880, #293f50);
   color: #212121;
   line-height: 1.5;
   padding: 0;
@@ -18,8 +18,9 @@ body {
 }
 
 button {
-  border-radius: 10px;
-  border: #060706 1px solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 1px rgba(0, 0, 0, .14), 0 2px 1px rgba(0, 0, 0, .2);
+  border-radius: 0 0 10px 10px;
+  border: 1px solid;
   padding: 7px 20px;
   background-color: #f4faf6;
   cursor: pointer;
@@ -41,8 +42,9 @@ button:hover {
 }
 
 .search-input {
-  border-radius: 10px;
-  border: #030704 1px solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 1px rgba(0, 0, 0, .14), 0 2px 1px rgba(0, 0, 0, .2);
+  border-radius: 0 0 10px 10px;
+  border: 1px solid;
   cursor: pointer;
   width: 350px;
   margin-right: 15px;
@@ -63,11 +65,11 @@ input::placeholder {
 .button-wrapper {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 10px;
 }
 
 .gallery {
-  padding: 60px;
+  padding: 65px 60px 10px 60px;
   display: flex;
   align-items: center;
   justify-content: center;
