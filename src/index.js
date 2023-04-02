@@ -64,14 +64,35 @@ function imgMarkup(images) {
 }
 
 function onLoadMore() {
-  page += 1;
-  getImages(dataInput, page)
-    .then(images => {
-      getGallery(images);
-      smothScroll();
-    })
-    .catch(responseMessage);
+  const galleryBottom = refs.gallery.getBoundingClientRect().bottom;
+  const windowBottom = window.innerHeight;
+
+  if (galleryBottom <= windowBottom) {
+    page += 1;
+    getImages(dataInput, page)
+      .then(images => {
+        getGallery(images);
+        smothScroll();
+      })
+      .catch(responseMessage);
+  }
 }
+
+const options = {
+  rootMargin: '0px',
+  threshold: 0,
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      onLoadMore();
+    }
+  });
+}, options);
+
+observer.observe(refs.loadMoreBtn);
+
 function smothScroll() {
   const { height: cardHeight } =
     refs.gallery.firstElementChild.getBoundingClientRect();
